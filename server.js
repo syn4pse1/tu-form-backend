@@ -5,6 +5,13 @@ const fs = require('fs');
 require('dotenv').config();
 
 const app = express();
+
+app.use(cors({
+  origin: '*', // Puedes reemplazar * por tu dominio exacto si quieres más seguridad
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
+}));
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
